@@ -20,11 +20,10 @@
     left: 0px;
     color: transparent;
     background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: none;
     opacity: 0;
     z-index: 0;
-	-webkit-backface-visibility: hidden;
+    overflow: hidden;
+	  -webkit-backface-visibility: hidden;
     -webkit-animation: imageAnimation 30s linear infinite 0s;
     -moz-animation: imageAnimation 30s linear infinite 0s;
     -o-animation: imageAnimation 30s linear infinite 0s;
@@ -71,7 +70,7 @@ div.r{
      background-attachment: fixed;
 }
 .cb-slideshow li:nth-child(3) span {
-    background-image: url(../resource/slide/b.png);
+    background-image: url(../resource/slide/b.jpg);
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
@@ -159,7 +158,7 @@ div.r{
   height: 0;
   bottom: 0px;
   left: 0;
-  border-top: 170px solid transparent;
+  border-top: 100px solid transparent;
   border-left: 50vw solid rgba(0, 0, 0, 0.29);
   border-bottom: 0px solid transparent;
   position: absolute;
@@ -172,7 +171,7 @@ clip-path: polygon(0 0%, 100% 100%, 0 100%);
   height: 0;
   bottom: 0px;
   right: 0;
-  border-top: 170px solid transparent;
+  border-top: 100px solid transparent;
   border-right: 50vw solid rgba(0, 0, 0, 0.29);
   border-bottom: 0px solid transparent;
   position: absolute;
@@ -263,6 +262,25 @@ clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
     19% { opacity: 0 }
     100% { opacity: 0 }
 }
+
+div.logo-big{
+    position: absolute;
+    top: 15%;
+    margin-left: 50px;
+    height: 121px;
+    width: 343px;
+    display: inline-block;
+    cursor: pointer;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+}
+div.logo-big img{
+    height: 100%;
+    width: 100%;
+}
+
+
 /* Show at least something when animations not supported */
 .no-cssanimations .cb-slideshow li span{
 	opacity: 1;
@@ -273,4 +291,70 @@ clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
 }
 @media screen and (max-width: 600px) {
     .cb-slideshow li div h3 { font-size: 80px }
+}
+@media screen and (max-width:770px) {
+  .slideshow-container {
+    height: 50%;
+
+  }
+}
+@media screen and (max-width:770px) {
+
+  .cb-slideshow li span {
+     margin: 0;
+      height: 100%;
+      background-size: contain;
+      overflow: hidden;
+      background-repeat: no-repeat;
+    }
+}
+@media screen and (max-width:450px) {
+  .slideshow-container {
+    height: 30%;
+
+  }
+}
+
+@media screen and (max-width:650px) {
+
+ /* .cb-slideshow li span {
+    margin: 0;
+    height: 100%;
+    background-size: contain;
+    overflow: hidden;;
+    }
+  .cb-slideshow .links {
+    border-top: 50px solid transparent;
+      }
+  .cb-slideshow .rechts {
+    border-top: 50px solid transparent;
+    }*/
+  div.logo-big{
+    top: 15%;
+    margin-left: 10px;
+    max-height: 80px;
+    max-width: 200px;
+ }
+}
+
+@media screen and (max-width:450px) {
+
+  .cb-slideshow li span {
+    margin: 0;
+    height: 100%;
+    background-size: contain;
+    overflow: hidden;;
+    }
+  .cb-slideshow .links {
+    border-top: 50px solid transparent;
+      }
+  .cb-slideshow .rechts {
+    border-top: 50px solid transparent;
+    }
+  div.logo-big{
+    top: 15%;
+    margin-left: 10px;
+    max-height: 60px;
+    max-width: 150px;
+ }
 }
