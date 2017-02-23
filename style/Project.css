@@ -1,0 +1,92 @@
+
+#header {
+    margin-top: 0%;
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+nav.header{
+    width: 85%;
+    height: 6%;
+    background-color: aqua;
+}
+#nav {
+    margin-top: 0%;
+    font-family:berlin sans fb;
+    font-size: 20px;
+    line-height:50px;
+    background-color:rgba(230, 195, 176, 0.45);
+    height:100%;
+    width:15%;
+    float:left;
+    padding:35px; 
+}
+#section {
+     margin-top: 0%;
+     font-family:arial;
+     width:50%;
+     float:left;
+    height: 60%;
+    margin-top: 5%;
+    margin-left: 20%;
+    padding:10px; 
+    font-weight: bolder;
+    border: 0.5px solid #333;
+    box-shadow: 0px 4px 8px 0px rgba(76, 232, 148, 0.85), 0px 6px 20px 0px rgba(216, 214, 229, 0.75);
+    border-radius: 20px;
+    background-color: rgba(213, 219, 224, 0.52);
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:25px; 
+}
+.bg { 
+    width: 100%;
+    height: 100%;
+    background-image: url(../resource/slide/1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-repeat: none;
+}
+div.links {
+  width: 0;
+  height: 0;
+  bottom: 0px;
+  left: 0;
+  border-top: 400px solid transparent;
+  border-left: 50vw solid rgba(0, 0, 0, 0.29);
+  border-bottom: 0px solid transparent;
+  position: absolute;
+ background-image: url(../stripes-large.png); 
+  -webkit-clip-path: polygon(0 0%, 100% 100%, 0 100%);
+clip-path: polygon(0 0%, 100% 100%, 0 100%);
+  }
+div.rechts {
+  width: 0;
+  height: 0;
+  bottom: 0px;
+  right: 0;
+  border-top: 400px solid transparent;
+  border-right: 50vw solid rgba(0, 0, 0, 0.29);
+  border-bottom: 0px solid transparent;
+  position: absolute;
+  background-image: url(../stripes-large.png); 
+-webkit-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+}
+.bgr{
+     height:100%;
+    width:100%;
+     background-image:url(../resource/bck.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.brg h1{
+    height:100%;
+    font-weight: 800;
+}
