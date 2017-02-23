@@ -24,11 +24,11 @@
     z-index: 0;
     overflow: hidden;
 	  -webkit-backface-visibility: hidden;
-    -webkit-animation: imageAnimation 30s linear infinite 0s;
-    -moz-animation: imageAnimation 30s linear infinite 0s;
-    -o-animation: imageAnimation 30s linear infinite 0s;
-    -ms-animation: imageAnimation 30s linear infinite 0s;
-    animation: imageAnimation 30s linear infinite 0s;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
 }
 .cb-slideshow li div {
     z-index: 1000;
@@ -179,13 +179,55 @@ clip-path: polygon(0 0%, 100% 100%, 0 100%);
 -webkit-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
 clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
 }
+svg{
+  position: absolute;
+  z-index: 1000;
+  bottom: 1.5em;
+  left: 50%;
+  width: 3em;
+  height: 1.75em;
+  margin: 0 0 0 -1.5em;
+  -webkit-animation: pointDown 0.6s 0.6s ease-in infinite alternate forwards;
+  animation: pointDown 0.6s 0.6s ease-in infinite alternate forwards;
+  fill: #fff;
+  cursor: pointer;
+}
+svg:hover{
+  fill: #444;
+  animation-name: godown;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  box-shadow: 0px 5px 0px 0.5px solid red; 
+}
+@keyframes godown {
+  0% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes pointDown {
 
+0% {
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+
+100% {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+}
 /* Animation for the slideshow images */
 @-webkit-keyframes imageAnimation {
     0% { opacity: 0;
     -webkit-animation-timing-function: ease-in; }
     8% { opacity: 1;
-         -webkit-animation-timing-function: ease-out; }
+    -webkit-animation-timing-function: ease-out; }
     17% { opacity: 1 }
     25% { opacity: 0 }
     100% { opacity: 0 }
@@ -262,15 +304,16 @@ clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
     19% { opacity: 0 }
     100% { opacity: 0 }
 }
-
 div.logo-big{
     position: absolute;
     top: 15%;
+    left:0;
     margin-left: 50px;
     height: 121px;
     width: 343px;
     display: inline-block;
     cursor: pointer;
+    text-align: left;
     float: left;
     background-color: rgba(0, 0, 0, 0.02);
     border-radius: 10px;
@@ -331,6 +374,7 @@ div.logo-big img{
     }*/
   div.logo-big{
     top: 15%;
+    float: left;
     margin-left: 10px;
     max-height: 80px;
     max-width: 200px;
@@ -352,7 +396,7 @@ div.logo-big img{
     border-top: 50px solid transparent;
     }
   div.logo-big{
-    top: 15%;
+    top: 30%;
     margin-left: 10px;
     max-height: 60px;
     max-width: 150px;

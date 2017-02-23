@@ -88,6 +88,9 @@
       <div class="logo-big">
         <a href="index.html" alt='herbert-logo'><img src="resource/header/logo-big.png"></a>
       </div>
+      <svg width="40px" height="40px" viewBox="0 0 310 177" preserveAspectRatio="xMidYMid meet">
+					<path  d="M159.875,174.481L306.945,27.41c2.93-2.929,2.93-7.678,0-10.606L292.803,2.661c-1.406-1.407-3.314-2.197-5.303-2.197c-1.989,0-3.896,0.79-5.303,2.197L154.572,130.287L26.946,2.661c-1.406-1.407-3.314-2.197-5.303-2.197c-1.989,0-3.897,0.79-5.303,2.197L2.197,16.804C0.733,18.269,0,20.188,0,22.107s0.732,3.839,2.197,5.303l147.071,147.071C152.197,177.411,156.945,177.411,159.875,174.481L159.875,174.481z" />
+				</svg>
       <div class="links"></div>
       <div class="rechts"></div>
     </ul>
@@ -95,24 +98,53 @@
       <h2>Herbert school</h2>
       <h3>Education With a Difference</h3>
     </section>
-    <section class="banner-img">
-      <div><img src="resource/herbert1.jpeg" alt="Herbert">
-        <div class="caption">
-          <div class="caption-heading">
-          <h2>Welcome to herbert school</h2>
-          </div>
-          <div class="caption-para">
-          <p>sahsdhf dfojdfjdsfjsdf sda fsdfjsdifsdal sdjfiosdjf sdds o sda</p>
-        </div>
-      </div>
-      </div>
-    </section>
+    <figure class="section-about yellow">
+      <figcaption>
+        <h2>WELCOME TO HERBERT SCHOOL</h2>
+        <p>HERBERT SCHOOL, Imphal formerly known as Harvard School was established in the year 2000 A.D. at Sagolband Bijoy Govinda by the Herbert Educational Foundation, Manipur with a vision to achieve academic excellence by imparting quality Education at the +2 level and to inculcate spiritual richness, transparency in thought and action through value based education
+        </p>
+        <button>read more</button>
+      </figcaption>
+      <div class="image"><img src="resource/school2.jpg" alt="sample3" /></div>
+      <div class="positio"></div>
+    </figure>
     <section class="box">
       <div><img src="" alt="">jghjhj</div>
       <div><img src="" alt="">hdghf</div>
       <div><img src="" alt="">ghfghf</div>
     </section>
+
+    <div id="ticker">
+      <div id="ticker-title">
+        <div id="brand"><i class="fa fa-newspaper-o"></i> Ornare</div>
+        <div id="alert"><i class="fa fa-warning"></i> Mattis Tortor</div>
+      </div>
+      <article>
+        <div id="featured-story">2 hours ago</div>
+        <div id="featured-headline">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
+        <div id="featured-preview">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum.</div>
+      </article>
+      <article>
+        <div id="featured-story">3 hours ago</div>
+        <div id="featured-headline">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui.</div>
+        <div id="featured-preview">Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum.</div>
+      </article>
+      <article>
+        <div id="featured-story">4 hours ago</div>
+        <div id="featured-headline">Nulla vitae elit libero, a pharetra augue.</div>
+        <div id="featured-preview">Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </article>
+      <article>
+        <div id="featured-story">4 hours ago</div>
+        <div id="featured-headline">Nulla vitae elit libero, a pharetra augue.</div>
+        <div id="featured-preview">Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </article>
+    </div>
+
+  
+    <div style="margin-top: 2000px">fjhasdflaskdfj</div>
     <script>
+
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
        function myFunction() {
           var x = document.getElementById("myTopnav");
@@ -122,6 +154,25 @@
               x.className = "topnav";
           }
         }
+        /*news*/
+        var interval;
+      function startTicker(){
+        $("#ticker article:first").slideUp(function(){
+          $(this).appendTo($("#ticker")).slideDown("fast");
+        });
+      }
+
+      function stopTicker(){
+        clearInterval(interval);
+      }
+
+      interval = setInterval(startTicker, 5000);
+
+      $("#ticker").hover(function(){
+        stopTicker();
+      }, function(){
+        interval = setInterval(startTicker, 5000);
+      });
     </script>
 </body>
 
